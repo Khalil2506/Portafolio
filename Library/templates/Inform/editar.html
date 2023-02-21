@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %} Edit information {% endblock %}
+{% block content %}
+<table id="languages-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Imagen</th>
+        <th>Nivel</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+  {% for language in languages %}
+      <tr>
+        <td>{{language.id}}</td>
+        <td>{{language.nombre}}</td>
+        <td>{{language.descripcion}}</td>
+        <td><img src="{{language.image.url}}" height="100" width="100" alt="react"></td>
+        <td>{{language.level}}</td>
+        <td><button><a href="{% url 'edit' language.id %}" class="a_editar">Editar</a></button></td>
+        <td><button><a href="{% url 'delete' language.id %}" class="a_editar">Eliminar</a></button></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+Edit information about programming languages
+{% endblock %}

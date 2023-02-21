@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>home</h1>
+        <nav>
+         <ul>
+            <li><a href="{% url 'portafolio'%}">Home</a></li>
+            <li><a href="{% url 'languages'%}">My studys</a></li>
+            <li><a href="{% url 'add'%}">Contact</a></li>
+         </ul>
+        </nav>
+    </header>
+    <div>
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
