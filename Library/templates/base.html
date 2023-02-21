@@ -9,19 +9,24 @@
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-    <header>
-        <h1>Portfolio</h1>
-        <nav>
-         <ul>
-            <li><a href="{% url 'portafolio'%}">Portfolio</a></li>
-            <li><a href="{% url 'languages'%}">Skill set</a></li>
-            <li><a href="{% url 'add'%}">Project</a></li>
-            <li><a href="{% url 'add'%}">Contact me</a></li>
-         </ul>
-        </nav>
-    </header>
-    <div>
+      <header class="header">
+        <div class="header-container">
+          <div class="header_title">
+            <h1><a href="#">Portfolio</a></h1>
+          </div>
+          <nav class="header_nav" id="header-nav">
+            <ul class="header_ul">
+              <li class="header_li"><a href="#portfolio" class="header_a">Portfolio</a></li>
+              <li class="header_li"><a href="#skillset" class="header_a">Skill set</a></li>
+              <li class="header_li"><a href="#project" class="header_a">Project</a></li>
+              <li class="header_li"><a href="#contact" class="header_a">Contact me</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    <div class="content">
         {% block content %} {% endblock %}
     </div>
+      <script type="text/javascript" src='{% static "js/index.js" %}'></script>
 </body>
 </html>

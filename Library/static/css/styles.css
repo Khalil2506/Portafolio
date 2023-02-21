@@ -81,3 +81,92 @@ form {
     font-size: 15px;
 
   }
+  /*start of my portfolio*/
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 9999;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  
+  .header_title h1 {
+    margin: 0;
+  }
+  .header_title a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .header_nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+  }
+  
+  .header_nav li {
+    margin: 0 10px;
+  }
+  
+  .header_a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .header_a:hover {
+    color: #f00;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+    }
+    .header_nav {
+      margin-top: 10px;
+      justify-content: center;
+    }
+  }
+
+  /* Cambio de color al hacer scroll */
+  .header_a_scroll {
+   color: black !important;
+   text-shadow: 1px 1px 1px 1px white,1px 1px 1px 1px white,1px 1px 1px 1px wheat,1px 1px 1px 1px white !important;
+   border-radius: 20px 10px;
+  }
+
+
+  /* Estilos para las secciones */
+  section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  section:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+      
+  
+     
+    
