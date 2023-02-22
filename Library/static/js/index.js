@@ -24,31 +24,27 @@ window.addEventListener("scroll", function() {
     }
   }
 });
-const colors = [
-  '#711c91',
-  '#ea00d9',
-  '#0abdc6',
-  '#133e7c'
-];
-
-createSquare = () => {
-  const section = document.querySelector('.section_content');
-  const square = document.createElement('span');
-  
-  const size = Math.random() * 50;
-  
-  square.style.width = 20 + size + 'px';
-  square.style.height = 20 + size + 'px';
-  
-  square.style.top = Math.random() * innerHeight + 'px';
-  square.style.left = Math.random() * innerWidth + 'px';
-  
-  square.style.background = colors[Math.floor(Math.random() * colors.length)];
-  section.appendChild(square);
-  
-  setTimeout(() => {
-    square.remove()
-  }, 5000);
+// codigo maquina
+const maquina = document.getElementById('maquina');
+const maquinaescribir = (text = '', tiempo = 200, etiqueta = '') =>{
+    let arrayCaracteres = text.split('');
+    etiqueta.innerHTML = '';
+    let i = 0;
+    let j = text.length;
+    let escribir = setInterval(function(){
+        if (i===arrayCaracteres.length){
+            etiqueta.innerHTML = text.substring(0,j);
+            j--
+            if (j===0){
+                etiqueta.innerHTML = '';
+                i= 0 ;
+                j = text.length;
+            }
+        } else{
+            etiqueta.innerHTML += arrayCaracteres[i];
+            i++
+        }
+    }, tiempo)
 }
 
-setInterval(createSquare, 150);
+maquinaescribir("Developer",150,maquina);
