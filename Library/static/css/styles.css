@@ -92,6 +92,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  
 }
 
 .header {
@@ -168,6 +169,10 @@ section:nth-child(even) {
   background-color: #f2f2f2;
 }
 .body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
@@ -214,10 +219,15 @@ section:nth-child(even) {
   height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  text-align: center;
+}
+.div_main{
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .section_content_2{
   height: 100vh;
@@ -248,30 +258,98 @@ section:nth-child(even) {
 }
 /*Section 1*/
 .content_me{
-  margin: 2em;
-  margin-left: 5em;
+  width: 50%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 .small_me{
-  font-size: 2em;
+  display: block;
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 1.8em;
   color: white;
   padding: 0;
   margin: 0;
+  user-select: none;
+  font-family: 'Times New Roman', Times, serif;
 }
+
 .title_me{
+  display: block;
+  font-weight: 700;
   font-size: 4.5em;
+  letter-spacing: 2px;
   color: white;
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
+  user-select: none;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .maquina_p{
-  font-size: 2em;
+  display: block;
+  font-size: 3em;
   color: white;
-  padding: 0;
+  padding: 0 3px;
   margin: 0;
+  user-select: none;
 }
+#maquina{
+  color: #7f00ff;
+  text-transform: capitalize;
+}
+.btns{
+  width: 100%;
+  position: relative;
+}
+.btns button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: white;
+  background-color: #A9B2FC;
+  padding: 0.5em;
+  margin: 20px 5px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+.btns button:hover{
+  background-color: #7f00ff;
+}
+.btns a{
+
+  color: white;
+  text-decoration: none;
+}
+.content_img{
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.content_img img{
+  position: relative;
+  height: 100%;
+  width: 80%;
+  top: 10px;
+  right: 00px;
+  transform: rotateY(180deg);
+  animation: animateuser 4s linear infinite;
+  border-radius: 2em;
+}
+@keyframes animateuser {
+  50%{
+    right: 20px;
+    top: 0px;
+  }
+}
+  
+
 
 
