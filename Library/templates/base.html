@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-
+  <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+  <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
   <title>{% block title %} {% endblock %}</title>
 </head>
 
@@ -15,7 +16,7 @@
   <header class="header">
     <div class="header-container">
       <div class="header_title">
-        <h1><a href="#">Portfolio</a></h1>
+        <h1><a href="#">Port<p class="title_p">olio</p></a></h1>
       </div>
       <nav class="header_nav" id="header-nav">
         <ul class="header_ul">
@@ -25,6 +26,15 @@
           <li class="header_li"><a href="#contact" class="header_a">Contact me</a></li>
         </ul>
       </nav>
+      <div class="icon"><i class="fa-solid fa-bars"></i></div>
+      <div class="nav_responsive">
+        <ul class="header_ul_responsive">
+          <li class="header_li_responsive"><a href="#portfolio" class="header_a_resposive">Home</a></li>
+          <li class="header_li_responsive"><a href="#skillset" class="header_a_resposive">Skill set</a></li>
+          <li class="header_li_responsive"><a href="#project" class="header_a_resposive">Project</a></li>
+          <li class="header_li_responsive"><a href="#contact" class="header_a_resposive">Contact me</a></li>
+        </ul>
+      </div>
     </div>
   </header>
   <div class="body">

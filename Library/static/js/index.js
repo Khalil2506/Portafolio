@@ -60,3 +60,11 @@ links.forEach(link => {
     });
   });
 });
+//cambiar de clase
+const miBoton = document.querySelector(".icon");
+const miElemento = document.querySelector(".header_ul_responsive");
+
+// agregar evento de clic al botón
+miBoton.addEventListener("click", function() {
+  miElemento.classList.toggle("activo");
+});
