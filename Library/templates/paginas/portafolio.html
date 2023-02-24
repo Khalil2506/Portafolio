@@ -9,7 +9,7 @@
           <h1 class="title_me">Khalil Bautista</h1>
           <p class="maquina_p">I am <span class="maquina"></span></p>
           <div class="btns">
-            <button>Dowload CV</button>
+            <button><a href="{% url 'show_cv' %}" target="_blank">Dowload CV</a></button>
             <button><a href="#contact">Contact me</a></button>
           </div>
         </div>
@@ -19,17 +19,28 @@
       </div>
     </section>
     
-    <section id="skillset" class="section_content_2">
-      <h2>Skill Set</h2>
-      <p>Some content here</p>
-     
+    <section id="profile" class="section_content_2">
+      <div class="div_profile">
+      <div class="content_img_profile">
+        <img src="{% static 'imagenes/Profile.png' %}" alt="Khalil Bautista">
+      </div>
+      <div class="content_profile">
+        <h2>My Profile</h2>
+        <p>I am a student of the 7th cycle of the Systems Engineering career at the Technological University of Peru. I belonged to the higher fifth of my university. I am looking for opportunities to grow professionally in companies that are dedicated to Information Systems, especially in web application development projects and data analysis.
+        </p>
+      </div>
+    </div>
     </section>
     
-    <section id="project" class="section_content_3">
+    <section id="skillset" class="section_content_3">
       <h2>Project</h2>
       <p>Some content here</p>
     </section>
     
+    <section id="project" class="section_content_4">
+      <h2>Contact Me</h2>
+      <p>Some content here</p>
+    </section>
     <section id="contact" class="section_content_4">
       <h2>Contact Me</h2>
       <p>Some content here</p>

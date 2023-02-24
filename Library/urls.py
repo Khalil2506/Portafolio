@@ -10,5 +10,6 @@ urlpatterns = [
     path('edit/', views.edit, name='edit'),
     path('delete/<int:id>', views.delete, name='delete'),
     path('edit/<int:id>', views.languages, name='edit'),
+    path('show_cv/', views.show_cv, name='show_cv'),
     
 ]+ static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

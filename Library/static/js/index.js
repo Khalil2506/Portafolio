@@ -63,8 +63,17 @@ links.forEach(link => {
 //cambiar de clase
 const miBoton = document.querySelector(".icon");
 const miElemento = document.querySelector(".header_ul_responsive");
+const myClick = document.querySelectorAll(".header_a_resposive")
 
 // agregar evento de clic al botón
-miBoton.addEventListener("click", function() {
-  miElemento.classList.toggle("activo");
+function toggleMenu() {
+  miElemento.classList.toggle('activo');
+
+}
+// Agregar controlador de eventos de clic al botón del menú
+miBoton.addEventListener('click', toggleMenu);
+
+// Agregar controlador de eventos de clic a cada enlace del menú para ocultar el menú después de hacer clic
+myClick.forEach(link => {
+  link.addEventListener('click', toggleMenu);
 });

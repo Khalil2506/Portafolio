@@ -1,7 +1,10 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from django.conf import settings
+from django.http import FileResponse
 from .models import Study
 from .forms import StudyForm
+import os
 
 def portafolio(request):
     return render(request,'paginas/portafolio.html')
@@ -26,3 +29,11 @@ def delete(request, id):
     languages = Study.objects.get(id=id)
     languages.delete(using='default', keep_parents=False)
     return redirect('edit')
+def show_cv(request):
+    cv_path = os.path.join(settings.BASE_DIR, 'Library', 'static', 'pdfs', 'cv.pdf')
+    with open(cv_path, 'rb') as pdf:
+        response = HttpResponse(pdf.read(), content_type='application/pdf')
+        response['Content-Disposition'] = 'inline;filename=CV.pdf'
+        return response
+    pdf.closed
+
