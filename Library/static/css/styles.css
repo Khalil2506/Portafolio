@@ -1,50 +1,9 @@
-form {
-  width: 500px;
-  margin: 50px auto;
-  text-align: center;
-  padding: 30px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px #ccc;
+/*start of my portfolio*/
+:root {
+  --color-2: #FF0101;
+  --color-1: #FF6400;
 }
-
-.form-group {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-label {
-  font-weight: bold;
-}
-
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 10px #ccc;
-  margin-top: 10px;
-}
-
-button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
+/*table*/
 #languages-table {
   width: 100%;
   border-collapse: collapse;
@@ -85,12 +44,6 @@ button[type="submit"]:hover {
   color: white;
   font-size: 15px;
 
-}
-
-/*start of my portfolio*/
-:root {
-  --color-2: #FF0101;
-  --color-1: #FF6400;
 }
 
 body {
@@ -491,6 +444,7 @@ section:nth-child(even) {
   border-radius: 2em;
   background-color: rgba(255, 255, 255, 0.5);
   opacity: 1;
+  padding: 1em;
 }
 
 .skill_title {
@@ -540,6 +494,7 @@ section:nth-child(even) {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  user-select: none;
 }
 
 .skill_img_content img {
@@ -552,6 +507,112 @@ section:nth-child(even) {
   backdrop-filter: blur(10px);
   padding: 1em;
   border-radius: 1em;
+  user-select: none;
+}
+/*Contact me*/
+.div_contact{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.content_contact{
+  width: 80%;
+  height: max-content;
+  display: flex;
+  padding: 2em;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+  margin-top: 5%;
+  border-radius: 2em;
+}
+.contact_1{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1em;
+}
+.contact_1 h1{
+  display: inline-block;
+  position: relative; 
+  background-image: linear-gradient(to right, var(--color-1), var(--color-2));
+  -webkit-background-clip: text;
+  letter-spacing: 2px;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact_p{
+  width: 90%;
+  font-family:cursive;
+  line-height: 2;
+  font-size: 1.1em;
+}
+.contact_data{
+  font-size: 1.2em;
+}
+.contact_2{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact_2 form{
+  height: 50%;
+  display: flex;
+  width: 75%;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 2em;
+  border-radius: 2em;
+  
+}
+.contact_label{
+  font-size: 1.5em;
+}
+.contact_input{
+  padding: 0.7em;
+  border-radius:0.5em ;
+  margin: 1em 0;
+  border: solid 1px #cccccc;
+  background-color: transparent;
+  outline: none;
+}
+.contact_input:focus{
+  padding: 0.7em;
+  border-radius:0.5em ;
+  margin: 1em 0;
+  border: solid 1px #cccccc !important;
+  background-color: transparent;
+}
+.contact_button{
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: white;
+  background-image: linear-gradient(to right, #8F01FF, #FF7C01);
+  padding: 0.5em;
+  margin: 20px 5px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+.contact_button:hover {
+  background-image: linear-gradient(to right, #FF7C01, #8F01FF);
 }
 
 /*responsive*/
@@ -870,13 +931,16 @@ section:nth-child(even) {
     border-radius: 10px;
     font-size: 1.4em;
   }
+  .header_li_responsive :hover{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
 
   .header_a_resposive:hover {
     background-image: linear-gradient(to right, #8F01FF, #FF7C01);
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
     color: white;
   }
 
@@ -885,6 +949,13 @@ section:nth-child(even) {
     text-decoration: none;
     color: black;
     letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header_a_resposive svg{
+   margin-right: 0.5em;
   }
 
   /* profile responsive*/

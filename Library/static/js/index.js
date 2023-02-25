@@ -77,3 +77,21 @@ miBoton.addEventListener('click', toggleMenu);
 myClick.forEach(link => {
   link.addEventListener('click', toggleMenu);
 });
+// lazy load
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img[data-src]");
+  var imgObserver = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var img = entry.target;
+        img.src = img.dataset.src;
+        img.classList.remove("lazy");
+        imgObserver.unobserve(img);
+      }
+    });
+  });
+
+  lazyloadImages.forEach(function(img) {
+    imgObserver.observe(img);
+  });
+});

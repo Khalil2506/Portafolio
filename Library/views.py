@@ -5,10 +5,32 @@ from django.http import FileResponse
 from .models import Study
 from .forms import StudyForm
 import os
+from django.contrib import messages
+from django.core.mail import send_mail
+from .forms import ContactForm
 
 def portafolio(request):
     languages = Study.objects.all()
-    return render(request,'paginas/portafolio.html',{'languages':languages})
+    alert_message = None
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+            send_mail(
+                f'Nuevo mensaje de {name}',
+                f'Mensaje: {message}\n\nCorreo electrónico del remitente: {email}',
+                email,
+                ['khalilbautista25@gmail.com'],
+                fail_silently=False,
+            )
+            messages.success(request, 'Your message has been sent successfully.')
+            alert_message = 'Your message has been sent successfully.'
+            form = ContactForm()
+    else:
+        form = ContactForm()
+    return render(request,'paginas/portafolio.html',{'languages':languages,'form': form, 'alert_message': alert_message})
 def languages(request,id):
     languages = Study.objects.get(id=id)
     form = StudyForm(request.POST or None,request.FILES or None,instance=languages)
