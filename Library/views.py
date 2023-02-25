@@ -7,7 +7,8 @@ from .forms import StudyForm
 import os
 
 def portafolio(request):
-    return render(request,'paginas/portafolio.html')
+    languages = Study.objects.all()
+    return render(request,'paginas/portafolio.html',{'languages':languages})
 def languages(request,id):
     languages = Study.objects.get(id=id)
     form = StudyForm(request.POST or None,request.FILES or None,instance=languages)

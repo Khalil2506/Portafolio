@@ -11,6 +11,12 @@
   <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
   <link rel="icon" href="{% static 'imagenes/Khalil.png' %}">
   <title>{% block title %} {% endblock %}</title>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+  <script>
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: '#lazy-section-3 img'
+    });
+</script>
 </head>
 
 <body>
@@ -53,6 +59,7 @@
       backDelay:1500
     })
   </script>
+
 </body>
 
 </html>

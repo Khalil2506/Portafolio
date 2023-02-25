@@ -4,7 +4,7 @@
     <div class="form-group">
       <label for="nombre">{{ campo.label }}</label>
       {% if campo.fields.widget.input_type == 'file' and campo.value  %}
-      <img src="{{MEDIA_URL}}/imagenes/{{campo.value}}" width="100">
+      <img src="{{STATIC_URL}}/imagenes/{{campo.value}}" width="100">
       {% endif %}
       <input type="{{ campo.field.widget.input_type }}"
        id="nombre" name="{{ campo.name }}" 

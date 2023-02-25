@@ -41,22 +41,17 @@
           <div class="skill_title">
             <h1>SKILL SET</h1>
           </div>
+          
           <div class="skill_img">
-            <div class="skill_img_content">
-            <img src="{% static 'imagenes/CSS.png' %}" alt="Khalil Bautista">
-            <img src="{% static 'imagenes/React.png' %}" alt="Khalil Bautista">
-            <img src="{% static 'imagenes/React.png' %}" alt="Khalil Bautista">
-            <img src="{% static 'imagenes/CSS.png' %}" alt="Khalil Bautista">
-            <img src="{% static 'imagenes/CSS.png' %}" alt="Khalil Bautista">
-            <img src="{% static 'imagenes/CSS.png' %}" alt="Khalil Bautista">
-            <img src="{% static 'imagenes/CSS.png' %}" alt="Khalil Bautista">
-            <img src="{% static 'imagenes/CSS.png' %}" alt="Khalil Bautista">
-              <img src="{% static 'imagenes/CSS.png' %}" alt="Khalil Bautista">
-            <img src="{% static 'imagenes/CSS.png' %}" alt="Khalil Bautista">
-            <img src="{% static 'imagenes/CSS.png' %}" alt="Khalil Bautista">
-            <img src="{% static 'imagenes/CSS.png' %}" alt="Khalil Bautista">
+            
+            <div class="skill_img_content" id="lazy-section-3">
+              {% for language in languages %}
+            <img src="{% static '/' %}{{language.image}}" alt="{{language.nombre}}">
+            {% endfor %}
           </div>
+          
           </div>
+          
         </div>
       </div>
     </section>
