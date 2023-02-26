@@ -79,6 +79,7 @@
                    id="nombre" name="{{ campo.name }}" 
                    placeholder="{{ campo.label }}"
                    class="contact_input"
+                   {% if forloop.counter == 3 %}class="contact_input_large"{% endif %}
                    value="{{ campo.value | default:'' }}"
                   >          
                 {% endfor %}

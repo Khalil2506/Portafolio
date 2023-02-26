@@ -573,7 +573,7 @@ section:nth-child(even) {
   justify-content: center;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   padding: 2em;
   border-radius: 2em;
   
@@ -588,6 +588,10 @@ section:nth-child(even) {
   border: solid 1px #cccccc;
   background-color: transparent;
   outline: none;
+
+}
+.contact_input::placeholder{
+
 }
 .contact_input:focus{
   padding: 0.7em;
@@ -595,6 +599,12 @@ section:nth-child(even) {
   margin: 1em 0;
   border: solid 1px #cccccc !important;
   background-color: transparent;
+}
+.contact_input_large {
+  font-size: 20px;
+  padding: 3em;
+  width: 400px;
+  height: 60px;
 }
 .contact_button{
   outline: none;
@@ -1022,6 +1032,73 @@ section:nth-child(even) {
       top: 5px;
     }
   } 
+  /*contact responsive*/
+  .content_contact{
+    width: 80%;
+    height: max-content;
+    flex-direction: column;
+    padding: 1em;
+    margin-top: 0;
+    margin-top: 10%;
+
+  }
+  .contact_1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1em;
+  }
+  .contact_1 h1{
+    font-size: 1.2em;
+    margin: 0.3em 0;
+  }
+  
+  .contact_p{
+    width: 100%;
+    line-height: 1.1;
+    font-size: 1em;
+    margin: 0.5em 0;
+  }
+  .contact_data{
+    font-size: 1em;
+    margin: 0.3em 0;
+  }
+  .contact_2{
+    width: 100%;
+    height: 50%;
+  }
+  .contact_2 form{
+    height: max-content;
+    width: 85%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1.5em;
+  }
+  .contact_label{
+    font-size: 1.1em;
+  }
+  .contact_input{
+    padding: 0.6em;
+    margin: 1em 0;
+    border: solid 1px #cccccc;
+    background-color: transparent;
+    outline: none;
+  
+  }
+  .contact_input::placeholder{
+    
+  }
+  .contact_input:focus{
+    padding: 0.6em;
+    margin: 1em 0;
+  }
+  .contact_button{
+    font-size: 1.3em;
+    padding: 0.4em;
+    margin: 10px 5px;
+  }
 }
 @media only screen and (max-width: 603px) {
   .div_skill {
