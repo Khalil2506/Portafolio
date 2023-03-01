@@ -59,4 +59,18 @@ def show_cv(request):
         response['Content-Disposition'] = 'inline;filename=CV.pdf'
         return response
     pdf.closed
+def show_spp(request):
+    cv_path = os.path.join(settings.BASE_DIR, 'Library', 'static', 'pdfs', 'spp.pdf')
+    with open(cv_path, 'rb') as pdf:
+        response = HttpResponse(pdf.read(), content_type='application/pdf')
+        response['Content-Disposition'] = 'inline;filename=spp.pdf'
+        return response
+    pdf.closed    
+def show_pdb(request):
+    cv_path = os.path.join(settings.BASE_DIR, 'Library', 'static', 'pdfs', 'pdb.pdf')
+    with open(cv_path, 'rb') as pdf:
+        response = HttpResponse(pdf.read(), content_type='application/pdf')
+        response['Content-Disposition'] = 'inline;filename=pdb.pdf'
+        return response
+    pdf.closed        
 

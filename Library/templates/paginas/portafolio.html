@@ -45,9 +45,18 @@
           <div class="skill_img">
             
             <div class="skill_img_content" id="lazy-section-3">
-              {% for language in languages %}
-            <img data-src="{% static '/' %}{{language.image}}" alt="{{language.nombre}}">
-            {% endfor %}
+              <img src="{% static 'imagenes/HTML.png' %}" alt="Html" >
+              <img src="{% static 'imagenes/CSS.png' %}" alt="CSS" >
+              <img src="{% static 'imagenes/JS.png' %}" alt="Javascript" >
+              <img src="{% static 'imagenes/React.png' %}" alt="React" >
+              <img src="{% static 'imagenes/Nextjs.png' %}" alt="Nextjs" >
+              <img src="{% static 'imagenes/python.png' %}" alt="python" >
+              <img src="{% static 'imagenes/php.png' %}" alt="php" >
+              <img src="{% static 'imagenes/Java.png' %}" alt="Java" >
+              <img src="{% static 'imagenes/mysql.png' %}" alt="mysql" >
+              <img src="{% static 'imagenes/sqlserver.png' %}" alt="sqlserver" >
+              <img src="{% static 'imagenes/GitHub.png' %}" alt="GitHub" >
+              <img src="{% static 'imagenes/Django.png' %}" alt="Django" >
           </div>
           
           </div>
@@ -90,41 +99,41 @@
           </div>
           <div class="project_content">
             <div class="project_img">
-              <img src="{% static 'imagenes/PaulPizza.png' %}" alt="Khalil Bautista">
+              <img src="{% static 'imagenes/SystemPP.png' %}" alt="Khalil Bautista">
             </div>
             <div class="project_p">
               <p class="project_p_1">System Pizza Paul</p>
               <p class="project_p_2">Made with Java and mysql</p>
             </div>
             <div class="project_link">
-             <a href="" target="_blank">Link page</a>
-             <a href="" target="_blank">Link GitHub</a>
+             <a href="{% url 'show_spp' %}" target="_blank">Link Doc</a>
+             <a href="https://github.com/Khalil2506/System-Pizza-Paul" target="_blank">Link GitHub</a>
             </div>
           </div>
           <div class="project_content">
             <div class="project_img">
-              <img src="{% static 'imagenes/PaulPizza.png' %}" alt="Khalil Bautista">
+              <img src="{% static 'imagenes/database.png' %}" alt="Khalil Bautista">
             </div>
             <div class="project_p">
               <p class="project_p_1">Data base:Daya Manualides</p>
               <p class="project_p_2">Made with SQL server</p>
             </div>
             <div class="project_link">
-             <a href="" target="_blank">Link page</a>
-             <a href="" target="_blank">Link GitHub</a>
+             <a href="{% url 'show_pdb' %}" target="_blank">Link Doc</a>
+             <a href="" target="_blank">not available</a>
             </div>
           </div>
           <div class="project_content">
             <div class="project_img">
-              <img src="{% static 'imagenes/PaulPizza.png' %}" alt="Khalil Bautista">
+              <img src="{% static 'imagenes/close.jpg' %}" alt="Khalil Bautista">
             </div>
             <div class="project_p">
               <p class="project_p_1">WebSite: Project X</p>
               <p class="project_p_2">Made with Next JS and mysql</p>
             </div>
             <div class="project_link">
-             <a href="" target="_blank">Link page</a>
-             <a href="" target="_blank">Link GitHub</a>
+             <a href="" target="_blank">soon...</a>
+             <a href="" target="_blank">soon...</a>
             </div>
           </div>
         </div>
