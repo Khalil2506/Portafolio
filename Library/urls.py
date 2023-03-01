@@ -5,11 +5,6 @@ from django.conf import settings
 from django.contrib.staticfiles.urls import static
 urlpatterns = [
     path('', views.portafolio, name='portafolio'),
-    path('languages/', views.languages, name='languages'),
-    path('add/', views.add, name='add'),
-    path('edit/', views.edit, name='edit'),
-    path('delete/<int:id>', views.delete, name='delete'),
-    path('edit/<int:id>', views.languages, name='edit'),
     path('show_cv/', views.show_cv, name='show_cv'),
     path('show_spp/', views.show_spp, name='show_spp'),
     path('show_pdb/', views.show_pdb, name='show_pdb'),
