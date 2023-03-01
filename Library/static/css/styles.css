@@ -733,7 +733,7 @@
     font-size: 1.4em;
     margin: 0.7em;
     padding: 0.2em;
-
+    transition: all 0.1s ;
   }
   .footer_redes a:hover{
     color: black;
@@ -1436,4 +1436,38 @@
       .footer_redes a{
         margin: 0.5em;
       }
+       /*contact responsive*/
+
+    .contact_1 h1{
+      font-size: 1em;
+      margin: 0.3em 0;
+    }
+    
+    .contact_p{
+      font-size: 0.8em;
+      margin: 0.5em 0;
+    }
+    .contact_data{
+      font-size: 0.8em;
+      margin: 0.3em 0;
+    }
+    .contact_2 form{
+      width: 87%;
+    }
+    .contact_label{
+      font-size: 0.9em;
+    }
+    .contact_input{
+      padding: 0.6em;
+      margin: 0.8em 0;
+    }
+    .contact_input:focus{
+      padding: 0.6em;
+      margin: 1em 0;
+    }
+    .contact_button{
+      font-size: 1em;
+      padding: 0.4em;
+      margin: 9px 5px;
+    }
   }
