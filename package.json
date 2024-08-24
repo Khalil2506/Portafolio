@@ -1,8 +1,0 @@
-{
-    "name": "my-project",
-    "version": "1.0.0",
-    "scripts": {
-      "build": "echo 'No build step specified' && exit 0"
-    },
-    "dependencies": {}
-  }
